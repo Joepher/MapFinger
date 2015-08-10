@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://impl.server.mapfinger.com/" targetNamespace="http://impl.server.mapfinger.com/" version="1.0">
+
+  <xs:element name="parseData" type="tns:parseData"/>
+
+  <xs:element name="parseDataResponse" type="tns:parseDataResponse"/>
+
+  <xs:complexType name="parseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:locationData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="locationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="accuracy" type="xs:string"/>
+      <xs:element minOccurs="0" name="address" type="xs:string"/>
+      <xs:element minOccurs="0" name="altitude" type="xs:string"/>
+      <xs:element minOccurs="0" name="bearing" type="xs:string"/>
+      <xs:element minOccurs="0" name="latitude" type="xs:string"/>
+      <xs:element minOccurs="0" name="longtitude" type="xs:string"/>
+      <xs:element minOccurs="0" name="speed" type="xs:string"/>
+      <xs:element minOccurs="0" name="timeline" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="parseDataResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
